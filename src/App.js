@@ -9,7 +9,6 @@ function App() {
       <Navigation />
       <header className="App-header">
         <Slides />
-
       </header>
     </div>
   );
