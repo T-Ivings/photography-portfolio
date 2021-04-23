@@ -7,15 +7,15 @@ $site-font: "Cormorant Garamond", serif;
 }
 
 .carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 7.5em;
+  margin-top: 12.5em;
 }
 
 .carousel-image {
   box-shadow: 3px 3px 20px;
   border-radius: 10px;
+}
+
+.carousel-slideslow {
 }
 
 .App-header {
@@ -31,6 +31,7 @@ $site-font: "Cormorant Garamond", serif;
 .navbar {
   display: flex;
   justify-content: center;
+  z-index: 9999;
 }
 
 .navbar-links {

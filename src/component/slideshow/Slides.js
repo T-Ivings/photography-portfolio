@@ -17,7 +17,6 @@ const Slides = () => {
 
   const imagesforCarousel = [img1, img2, img3, img4, img5, img6, img7, img9, img10, img11]
 
-
   const imageCarousel = imagesforCarousel.map((image, index) => {
     return( 
     <Carousel.Item key={index}>
@@ -30,6 +29,14 @@ const Slides = () => {
     </Carousel.Item>
     )
   })
+
+  const imageSlideshow = imagesforCarousel.map((image, index) => {
+
+    return (
+      <img src={image} index={index} width={"10%"}/>
+    )
+  })
+
   return (
     <Container className="carousel">
       <Carousel className="w-90 carousel-image" 
@@ -37,8 +44,10 @@ const Slides = () => {
       prevIcon={<BsArrowLeft size={"4em"} />}
       indicators={false} interval={7500} wrap fade>
         {imageCarousel}
-      </Carousel>
-      
+      </Carousel> <br/> <br/>
+      <div className="carousel-slideshow">
+        {imageSlideshow}
+      </div> <br/>
     </Container>
   )
 };
