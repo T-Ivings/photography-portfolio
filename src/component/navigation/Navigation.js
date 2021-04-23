@@ -4,6 +4,7 @@ import { Fade } from 'react-reveal'
 import logo from "../../images/carlena-ivings_web.jpg"
 
 const Navigation = () => {
+  
 return (
 <Fade top duration={3500}>
   <Navbar fixed="top" className="navbar">

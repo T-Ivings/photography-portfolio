@@ -6,10 +6,19 @@ $site-font: "Cormorant Garamond", serif;
 .App {
 }
 
-.App-header {
+.carousel {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 7.5em;
+}
+
+.carousel-image {
+  box-shadow: 3px 3px 20px;
+  border-radius: 10px;
+}
+
+.App-header {
   background-color: white;
   font-size: calc(10px + 2vmin);
   color: black;
@@ -30,10 +39,6 @@ $site-font: "Cormorant Garamond", serif;
   width: 100%;
   font-family: $site-font;
   color: black;
-}
-
-.navbar-logo {
-  opacity: 1;
 }
 
 #hero-section {

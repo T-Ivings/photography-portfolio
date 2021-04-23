@@ -11,9 +11,8 @@ function App() {
       <Navigation />
       <header className="App-header">
       </header>
-      <Container>
         <Slides />
-      </Container>
+    
     </div>
   
   );
