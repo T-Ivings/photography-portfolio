@@ -3,6 +3,7 @@ import { Container, Col, Row } from 'react-bootstrap';
 import photographer from '../../images/carl-port.jpg'
 
 const Intro = () => {
+  
   return (
     <section id="intro">
       <Container>

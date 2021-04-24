@@ -7,9 +7,11 @@ export default function SingleImg (props)  {
   return(
     <img
       id={props.id}
-      className={hovered ? 'image-hover ' : "single-image"}
+      alt={"If aree seeing this instead of my wife's lovely photographs, please send her an email letting us know."}
+      className={hovered ? 'hover-image' : 'single-image'}
       onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}
+      // onClick={}
       src={props.image}
       width={"10%"}
       />
