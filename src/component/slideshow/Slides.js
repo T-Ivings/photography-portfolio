@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import { Carousel, Container } from "react-bootstrap";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import img1 from "../../images/img1.jpg";
@@ -13,9 +13,13 @@ import img9 from "../../images/img9.jpg";
 import img10 from "../../images/img10.jpg";
 import img11 from "../../images/img11.jpg";
 
+const imagesforCarousel = [img1, img2, img3, img4, img5, img6, img7, img9, img10, img11]
+
 const Slides = () => {
 
-  const imagesforCarousel = [img1, img2, img3, img4, img5, img6, img7, img9, img10, img11]
+  const [scrollImage, setScrollImage] = useState([imagesforCarousel[0]]);
+
+
 
   const imageCarousel = imagesforCarousel.map((image, index) => {
     return( 
@@ -33,7 +37,7 @@ const Slides = () => {
   const imageSlideshow = imagesforCarousel.map((image, index) => {
 
     return (
-      <img src={image} index={index} width={"10%"}/>
+      <img className="single-image-slideshow" src={image} index={index} width={"10%"}/>
     )
   })
 
