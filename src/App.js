@@ -12,8 +12,8 @@ function App() {
       <Navigation />
       <header className="App-header">
       </header>
-        <Slides />
-        <Intro />
+        <Slides /><br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+        <Intro /><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/>  
     
     </div>
   

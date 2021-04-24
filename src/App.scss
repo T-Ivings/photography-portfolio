@@ -4,18 +4,7 @@
 $site-font: "Cormorant Garamond", serif;
 
 .App {
-}
-
-.carousel {
-  margin-top: 12.5em;
-}
-
-.carousel-image {
-  box-shadow: 3px 3px 20px;
-  border-radius: 10px;
-}
-
-.carousel-slideslow {
+  background-color: #fbfbfb;
 }
 
 .App-header {
@@ -31,7 +20,9 @@ $site-font: "Cormorant Garamond", serif;
 .navbar {
   display: flex;
   justify-content: center;
+  background: white;
   z-index: 9999;
+  opacity: 0.7;
 }
 
 .navbar-links {
@@ -42,16 +33,15 @@ $site-font: "Cormorant Garamond", serif;
   color: black;
 }
 
-#hero-section {
-  margin-top: 6em;
-}
-
 .hero-title {
   font-family: $site-font;
   align-self: center;
   margin-left: 2.5em;
 }
 
-.hero-image {
-  margin-left: 1.5em;
+#hero-section {
+  margin-top: 6em;
+}
+
+.image-hover {
 }
