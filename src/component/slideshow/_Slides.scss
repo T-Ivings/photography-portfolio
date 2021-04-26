@@ -1,16 +1,12 @@
-.hero-image {
-  margin-left: 1.5em;
-}
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
 
-.carousel {
-  margin-top: 12em;
+#hero {
 }
 
 .carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 50%;
 }
+
 .carousel-image {
   box-shadow: 3px 3px 20px;
   border-radius: 10px;
@@ -21,16 +17,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10em;
 }
 
-.single-image {
+.original-image {
+  width: 750;
+  height: 750;
 }
 
-.select-image {
-  border: solid 5px;
-  border-color: blue;
-}
-
-.hover-image {
-  transform: scale(1.1);
+.thumbnail-image {
+  width: 75px;
+  height: 50px;
 }

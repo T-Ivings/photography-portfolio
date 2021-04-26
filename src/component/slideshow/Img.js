@@ -11,24 +11,12 @@ export default function SingleImg (props)  {
 
   
 
-  useEffect(() => {
-  console.log("gets here")
-    if(classes.includes("hover")) {
-      classes += " select-image"
-      console.log(classes)
-    } else {
-      classes = "single-image"
-      console.log("but does it get here?")
-    }
-      console.log("finally here")
-  })
 
   return(
     <img
       id={props.id}
       alt={"If are seeing this instead of my wife's lovely photographs, please send her an email letting us know."}
       className={classes}
-     
       onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}
       onClick={()=> {setSelected(props.id)}}

@@ -1,9 +1,9 @@
 import { React, useState, useEffect } from "react";
-import { Carousel, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-
-import SingleImg from './Img';
+import ImageGallery from 'react-image-gallery';
 import './_Slides.scss';
+
 
 import img1 from "../../images/img1.jpg";
 import img2 from "../../images/img2.jpg";
@@ -17,49 +17,31 @@ import img9 from "../../images/img9.jpg";
 import img10 from "../../images/img10.jpg";
 import img11 from "../../images/img11.jpg";
 
-const imagesforCarousel = [img1, img2, img3, img4, img5, img6, img7, img9, img10, img11]
+
+const imagesForCarousel = [
+  {original: img1, thumbnail: img1},
+  {original: img2, thumbnail: img2},
+  {original: img3, thumbnail: img3},
+  {original: img4, thumbnail: img4},
+  {original: img5, thumbnail: img5},
+  {original: img6, thumbnail: img6},
+  {original: img7, thumbnail: img7},
+  {original: img9, thumbnail: img9},
+  {original: img10, thumbnail: img10},
+  {original: img11, thumbnail: img11},
+
+]
 
 const Slides = () => {
 
-  const [scrollImage, setScrollImage] = useState([imagesforCarousel[0]]);
-
-
-
-  const imageCarousel = imagesforCarousel.map((image, index) => {
-    return( 
-    <Carousel.Item key={index}>
-      <img
-      style={{borderRadius: "10px"}}
-      width={"100%"}
-      src={image}
-      alt={`Carousel photo ${{index}}` }
-      />
-    </Carousel.Item>
-    )
-  })
-
-  const imageSlideshow = imagesforCarousel.map((image, index) => {
-    
-    console.log(index)
-    return (
-      <SingleImg image={image} key={index} id={index} />
-    )
-  })
 
   return (
   <section id="hero">
     <Container className="carousel-container">
-      <Carousel className="carousel-image"
-      style={{width: "85%", height: "85%"}} 
-      nextIcon={<BsArrowRight size={"4em"}/>}
-      prevIcon={<BsArrowLeft size={"4em"} />}
-      indicators={false} interval={3000} wrap fade>
-        {imageCarousel}
-      </Carousel> 
-    </Container><br/>
-    <Container className="carousel-slideshow">
-      {imageSlideshow}
+    <ImageGallery items={imagesForCarousel} showFullscreenButton={false} showPlayButton={false} autoPlay={true} interval={7500} style={{width: "50%"}}/>
     </Container>
+
+
   </section>
   )
 };
