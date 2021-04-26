@@ -39,9 +39,10 @@ const Slides = () => {
   })
 
   const imageSlideshow = imagesforCarousel.map((image, index) => {
-
+    
+    console.log(index)
     return (
-      <SingleImg image={image} key={index}/>
+      <SingleImg image={image} key={index} id={index} />
     )
   })
 
