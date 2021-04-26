@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navigation />
+      <Navigation style={{zIndex: 99999}} />
       <header className="App-header">
       </header>
         <Slides /><br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
