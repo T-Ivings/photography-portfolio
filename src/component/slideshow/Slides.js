@@ -36,13 +36,11 @@ const Slides = () => {
 
 
   return (
-  <section id="hero">
-    <Container className="carousel-container">
-    <ImageGallery items={imagesForCarousel} showFullscreenButton={false} showPlayButton={false} autoPlay={true} interval={7500} style={{width: "50%"}}/>
-    </Container>
-
-
-  </section>
+    <section id="hero">
+      <Container className="carousel-container">
+        <ImageGallery items={imagesForCarousel} showFullscreenButton={false} showPlayButton={false} autoPlay={true} slideInterval={7500} style={{width: "50%"}}/>
+      </Container>
+    </section>
   )
 };
 
