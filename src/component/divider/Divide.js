@@ -1,16 +1,25 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { Divider } from '@material-ui/core';
+import "./_Seller.scss";
 
-const Divide = () => {
+const Seller = () => {
   return (
-    <Container><br/><br/><br/><br/><br/>
-      <Divider variant="middle" /><br/><br/><br/><br/><br/>
-      <div>Some text telling potential clients what you do</div><br/>
-      <div>What you specialize in</div><br/>
-      <div>IDK write something here to we have a blank space</div><br/><br/><br/><br/><br/><br/>
-      <Divider variant="middle" /><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <Container id="seller">
+      <Divider className='top-divider' variant="middle" />
+        <Container className="seller-text">
+          <Row>
+            Some text telling potential clients what you do
+          </Row><br/><br/>
+          <Row>
+            What you specialize in
+          </Row><br/><br/>
+          <Row>
+            IDK write something here to we have a blank space
+          </Row>
+        </Container>
+      <Divider className="bottom-divider" variant="middle" />
     </Container>
   )
 }
-export default Divide;
+export default Seller;
