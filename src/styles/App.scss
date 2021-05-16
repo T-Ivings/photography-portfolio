@@ -1,0 +1,85 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500");
+
+$site-font: "Cormorant Garamond", serif;
+
+.App {
+  background-color: #fbfbfb;
+}
+
+.App-header {
+  background-color: white;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: white;
+  z-index: 9999999;
+  opacity: 0.85;
+}
+
+#navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: $site-font;
+  color: black;
+  font-size: larger;
+  :hover {
+    opacity: 1;
+    text-decoration: underline;
+    font-size: x-large;
+    transition: 0.1s;
+  }
+}
+
+.hero-title {
+  font-family: $site-font;
+  align-self: center;
+  margin-left: 2.5em;
+}
+
+#hero-section {
+  margin-top: 6em;
+}
+
+.image-hover {
+}
+
+$bg: #0baad4;
+$text: rgba(255, 255, 255, 0.7);
+$hover: darken($bg, 10%);
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+Nav {
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    transition: transform 0.5s ease;
+  }
+}
+
+.effect {
+  padding-top: 10px;
+  &:before {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+
+    transform: scaleX(0);
+  }
+  &:hover:before {
+    transform: scaleX(1);
+  }
+}
