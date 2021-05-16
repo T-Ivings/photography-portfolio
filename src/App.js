@@ -1,8 +1,8 @@
-import './App.scss';
+import './styles/App.scss';
 import Navigation from './component/navigation/Navigation';
 import Slides from './component/slideshow/Slides';
 import Intro from './component/intro/Intro';
-import Divide from './component/divider/Divide'
+import Seller from './component/divider/Divide'
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
       <header className="App-header">
       </header>
         <Slides />
-        <Divide />
+        <Seller />
         <Intro />
     
     </div>
