@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navbar, Nav} from "react-bootstrap";
-import { Fade } from 'react-reveal'
 import logo from "../../images/carlena-ivings_web.jpg"
 
 const Navigation = () => {

@@ -1,6 +1,6 @@
-import { React, useState, useEffect } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+
 import ImageGallery from 'react-image-gallery';
 import './_Slides.scss';
 
@@ -12,7 +12,6 @@ import img4 from "../../images/img4.jpg";
 import img5 from "../../images/img5.jpg";
 import img6 from "../../images/img6.jpg";
 import img7 from "../../images/img7.jpg";
-import img8 from "../../images/img8.jpg";
 import img9 from "../../images/img9.jpg";
 import img10 from "../../images/img10.jpg";
 import img11 from "../../images/img11.jpg";
