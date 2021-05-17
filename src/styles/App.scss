@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500");
 
 $site-font: "Cormorant Garamond", serif;
+body {
+  font-family: $site-font;
+  font-size: larger;
+}
 
 .App {
   background-color: #fbfbfb;
@@ -45,41 +49,4 @@ $site-font: "Cormorant Garamond", serif;
   font-family: $site-font;
   align-self: center;
   margin-left: 2.5em;
-}
-
-#hero-section {
-  margin-top: 6em;
-}
-
-.image-hover {
-}
-
-$bg: #0baad4;
-$text: rgba(255, 255, 255, 0.7);
-$hover: darken($bg, 10%);
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-Nav {
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    transition: transform 0.5s ease;
-  }
-}
-
-.effect {
-  padding-top: 10px;
-  &:before {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-
-    transform: scaleX(0);
-  }
-  &:hover:before {
-    transform: scaleX(1);
-  }
 }

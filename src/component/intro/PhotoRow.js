@@ -1,18 +1,25 @@
-import { React,  useEffect, useState } from 'react';
+import { React, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
 export default function PhotoRow(props)  {
-  
-  const [hovered, setHovered] = useState(false);
 
-  useEffect(() => {
-    if (hovered) {
-console.log("WORKS")
-    } else {
-      console.log("WORKS * 2")
-    }
-  }, [hovered])
- 
+  const [hovered, setHovered] = useState(false)
+
+      const styles = {
+        myStyles: {
+        opacity: 1,
+        transition: "opacity 1s, background 1s",
+        background: "#EBEFF7"
+        },
+        myStylesHovered: {
+        opacity: 0.5,
+        transition: "opacity 1s, background 1s",
+        borderStyle: 'groove',
+        borderWidthBottom: 1,
+        borderWidthLeft: .5
+        }
+      }
+      
   if(props.id === 1 ) {
 
     return(
@@ -21,7 +28,7 @@ console.log("WORKS")
         <p>{props.text}</p>
         </Col>
         <Col>
-        <img src={props.picture} width={"550px"} alt="" className="photo-row" onMouseEnter={() => {setHovered(true)}} onMouseLeave={() => {setHovered(false)}}/>
+        <img style={hovered ? styles.myStylesHovered : styles.myStyles } src={props.picture} width={"550px"} alt="" className="photo-row" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}/>
       </Col>
     </Row>
     )
@@ -31,7 +38,7 @@ console.log("WORKS")
     return(
       <Row>
         <Col>
-        <img src={props.picture} width={"550px"} alt="" className="photo-row"/>
+        <img style={hovered ? styles.myStylesHovered : styles.myStyles } src={props.picture} width={"550px"} alt="" className="photo-row" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}/>
         </Col>
         <Col className="text-center">
         {props.text}

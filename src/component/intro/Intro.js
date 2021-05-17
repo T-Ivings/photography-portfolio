@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { Divider } from '@material-ui/core';
 import photographer from '../../images/carl-port.jpg';
 import photo2 from '../../images/carl-port-look.jpg';
 import photo3 from '../../images/img12.jpg'
@@ -36,6 +37,7 @@ const Intro = () => {
     <section id="intro">
       <Container>
         {photoRowData}
+      <Divider style={{marginTop: '5em'}} variant="middle" />
       </Container>
     </section>
   )
