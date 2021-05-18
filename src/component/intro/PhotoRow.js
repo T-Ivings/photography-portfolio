@@ -1,17 +1,18 @@
 import { React, useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Card } from 'react-bootstrap';
 
 export default function PhotoRow(props)  {
 
   const [hovered, setHovered] = useState(false)
+  
 
       const styles = {
-        myStyles: {
+        myImg: {
         opacity: 1,
         transition: "opacity 1s, background 1s",
         background: "#EBEFF7"
         },
-        myStylesHovered: {
+        myImgHovered: {
         opacity: 0.5,
         transition: "opacity 1s, background 1s",
         borderStyle: 'groove',
@@ -25,10 +26,12 @@ export default function PhotoRow(props)  {
     return(
       <Row>
         <Col className='text-center'>
-        <p>{props.text}</p>
+          <Card style={{padding: '1em'}}>
+            <Card.Text onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>{props.text}</Card.Text>
+          </Card>
         </Col>
         <Col>
-        <img style={hovered ? styles.myStylesHovered : styles.myStyles } src={props.picture} width={"550px"} alt="" className="photo-row" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}/>
+        <img style={hovered ? styles.myImgHovered : styles.myImg } src={props.picture} width={"550px"} alt="" className="photo-row" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}/>
       </Col>
     </Row>
     )
@@ -41,7 +44,9 @@ export default function PhotoRow(props)  {
         <img style={hovered ? styles.myStylesHovered : styles.myStyles } src={props.picture} width={"550px"} alt="" className="photo-row" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}/>
         </Col>
         <Col className="text-center">
-        {props.text}
+        <Card style={{paddingTop: '2em', paddingBottom: '2em'}}>
+            <Card.Text>{props.text}</Card.Text>
+          </Card>
       </Col>
     </Row>
     )

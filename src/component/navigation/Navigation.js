@@ -13,7 +13,7 @@ const Navigation = () => {
   const handleScroll = debounce(() =>  {
     const currentScrollPos = window.pageYOffset;
 
-    setVisible(prevScrollPos > currentScrollPos);
+    setVisible(prevScrollPos   > currentScrollPos);
 
     setPrevScrollPos(currentScrollPos);
   });
