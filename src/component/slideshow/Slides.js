@@ -28,7 +28,6 @@ const imagesForCarousel = [
   {original: img9, thumbnail: img9},
   {original: img10, thumbnail: img10},
   {original: img11, thumbnail: img11},
-
 ]
 
 const Slides = () => {

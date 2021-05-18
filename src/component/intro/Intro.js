@@ -34,7 +34,6 @@ const Intro = () => {
     <section id="intro">
       <Container>
         {photoRowData}
-      <Divider style={{marginTop: '5em'}} variant="middle" />
       </Container>
     </section>
   );
