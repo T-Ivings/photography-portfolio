@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { Divider } from '@material-ui/core';
-import photographer from '../../images/carl-port.jpg';
-import photo2 from '../../images/carl-port-look.jpg';
-import photo3 from '../../images/img12.jpg'
+import photo1 from '../../images/carl-port2-new.jpg';
+import photo2 from '../../images/intro-jace-new.jpg';
+import photo3 from '../../images/morty.jpg'
 import PhotoRow from './PhotoRow';
 import './Intro.scss';
 
@@ -13,12 +13,10 @@ const string2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi 
 
 const string3 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi libero augue, malesuada non semper nec, tristique ullamcorper lectus. Aenean ante ipsum, pulvinar quis condimentum   vitae, porta in nulla. Phasellus id faucibus ipsum, nec ullamcorper mauris.";
 
-const photoRowInformation = [[photographer, string1], [photo2, string2], [photo3, string3]];
+const photoRowInformation = [[photo1, string1], [photo2, string2], [photo3, string3]];
 
 
 const Intro = () => {
-
-
 
   const photoRowData = photoRowInformation.map((data, index) => {
     return (
@@ -27,10 +25,9 @@ const Intro = () => {
       id={index}
       text={data[1]}
       picture={data[0]}
-  
       />
     )
-  }) 
+  });
 
   
   return (
@@ -40,8 +37,7 @@ const Intro = () => {
       <Divider style={{marginTop: '5em'}} variant="middle" />
       </Container>
     </section>
-  )
-
-}
+  );
+};
 
 export default Intro;

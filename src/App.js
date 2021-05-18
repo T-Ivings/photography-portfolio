@@ -4,6 +4,7 @@ import Slides from './component/slideshow/Slides';
 import Intro from './component/intro/Intro';
 import Seller from './component/divider/Divide';
 import Footer from './component/footer/Footer';
+import Hero from './component/hero/Hero'
 
 function App() {
 
@@ -15,7 +16,6 @@ function App() {
         <Slides />
         <Seller />
         <Intro />
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <Footer />
     
     </div>

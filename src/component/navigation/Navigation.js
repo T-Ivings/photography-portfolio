@@ -1,19 +1,22 @@
 import React from 'react';
 import { Navbar, Nav} from "react-bootstrap";
+import { Fade } from 'react-reveal';
 import logo from "../../images/carlena-ivings_web.jpg"
 
 const Navigation = () => {
   return (
     <Navbar fixed={"top"} className="navbar">
-        <Nav justify id="navbar-links">
-          <Nav.Link>About</Nav.Link>
+      <Nav className='d-flex justify-content-around' id="navbar-links">
+        <Fade delay={1000}>
+          <Nav.Link>About</Nav.Link> 
           <Nav.Link>FAQ</Nav.Link>
           <Nav.Link>Portfolio</Nav.Link>
           <Navbar.Brand><img src={logo} width='300px'/></Navbar.Brand>
-          <Nav.Link>Kind Words</Nav.Link>
-          <Nav.Link>Contact</Nav.Link>
+          <Nav.Link>Packages</Nav.Link> 
+          <Nav.Link>Testimony</Nav.Link> 
           <Nav.Link>Blog</Nav.Link>
-        </Nav>
+        </Fade>
+      </Nav>
     </Navbar>
   )
 }
