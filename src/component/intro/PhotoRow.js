@@ -1,37 +1,42 @@
 import { React, useState } from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
+import Tilt from 'react-tilt'
 
 export default function PhotoRow(props)  {
 
-  const [hovered, setHovered] = useState(false)
-  
 
-      const styles = {
-        myImg: {
-        opacity: 1,
-        transition: "opacity 1s, background 1s",
-        background: "#EBEFF7"
-        },
-        myImgHovered: {
-        opacity: 0.5,
-        transition: "opacity 1s, background 1s",
-        borderStyle: 'groove',
-        borderWidthBottom: 1,
-        borderWidthLeft: .5
-        }
-      }
+
+const styles = {
+  'intro-text': {
+    padding: '1em',
+  }
+}
+     
       
   if(props.id === 1 ) {
 
     return(
       <Row>
         <Col className='text-center'>
-          <Card style={{padding: '1em'}}>
-            <Card.Text onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>{props.text}</Card.Text>
+          <Card>
+            <Card.Text style={styles['intro-text']}>{props.text}</Card.Text>
           </Card>
         </Col>
         <Col>
-        <img style={hovered ? styles.myImgHovered : styles.myImg } src={props.picture} width={"550px"} alt="" className="photo-row" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}/>
+        <Tilt options={{
+          reverse: false,
+          max: 8,
+          perspective: 1000,
+          scale: 1,
+          speed: 300,
+          transition: true,
+          axis: null,
+          reset: true,
+          easing: 'cubic-bezier(.03,.98,.52,.99)',
+          }}> 
+           <img  src={props.picture} width={"550px"} alt="" className="photo-row"/>
+        </Tilt>
+
       </Col>
     </Row>
     )
@@ -41,11 +46,23 @@ export default function PhotoRow(props)  {
     return(
       <Row>
         <Col>
-        <img style={hovered ? styles.myStylesHovered : styles.myStyles } src={props.picture} width={"550px"} alt="" className="photo-row" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}/>
+        <Tilt options={{
+        reverse: false,
+        max: 8,
+        perspective: 1000,
+        scale: 1,
+        speed: 300,
+        transition: true,
+        axis: null,
+        reset: true,
+        easing: 'cubic-bezier(.03,.98,.52,.99)',
+        }}>
+        <img  src={props.picture} width={"550px"} alt="" className="photo-row"/>
+        </Tilt>
         </Col>
         <Col className="text-center">
-        <Card style={{paddingTop: '2em', paddingBottom: '2em'}}>
-            <Card.Text>{props.text}</Card.Text>
+        <Card>
+        <Card.Text style={styles['intro-text']}>{props.text}</Card.Text>
           </Card>
       </Col>
     </Row>
