@@ -1,23 +1,34 @@
 import React from 'react';
 import { Fade } from 'react-reveal';
-import { Container } from 'react-bootstrap';
-import portrait from '../../images/carl-port.jpg'
+import { Container, Row } from 'react-bootstrap';
+import portrait from '../../images/seller-pic1.jpg'
+import './Hero.scss';
 
 const Hero = () => {
+  const myStyles = {
+    'bottomRight': {
+      alignSelf: 'flex-end',
+      fontSize: '48px',
+    },
+    'topRight': {
+      alignSelf: 'flex-start',
+      fontSize: '48px'
+    },
+ 
+  }
 return (
-  <section id="hero-section" className="Jumbotron">
-    <Container>
-      <Fade left duration={1000} delay={500} distance='30px'>
-        <h1 className="hero-title">
-          Welcome!
-        </h1>
-      </Fade>
-      <br/>
-      <Fade right duration={1000} delay={1000} distance='30px'>
-        Thanks for coming by :)
+  <section id="hero-section" >
+      <Container className='d-flex flex-column'>
+        <Fade left duration={2000}>
+          <div style={myStyles.topRight}>Capturing your moments</div>
+        </Fade>
+        <img src={portrait} width='80%' alt=''/>
+
+      <Fade right duration={2000} delay={1500}>
+        <div style={myStyles.bottomRight}>One frame at a time</div>
       </Fade>
 
-    </Container>
+      </Container>
   </section>
 )
 }
