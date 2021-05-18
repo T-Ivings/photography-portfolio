@@ -1,9 +1,11 @@
+@use '_Variables' as v;
 @import "~bootstrap/scss/bootstrap";
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500");
 
-$site-font: "Cormorant Garamond", serif;
+
+
+
 body {
-  font-family: $site-font;
+  @include v.siteFont;
   font-size: larger;
 }
 
@@ -21,35 +23,13 @@ body {
   color: #61dafb;
 }
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  background: white;
-  z-index: 9999999;
-  opacity: 0.85;
-}
 
-#navbar-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  font-family: $site-font;
-  color: black;
-  font-size: larger;
-  :hover {
-    opacity: 1;
-    text-decoration: underline;
-    font-size: x-large;
-    transition: 0.1s;
-  }
-}
 
 #hero-section {
   margin-top: 9em;
 }
 .hero-title {
-  font-family: $site-font;
+  font-family: v.$site-font;
   align-self: center;
   margin-left: 2.5em;
 }
