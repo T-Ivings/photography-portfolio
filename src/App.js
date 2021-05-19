@@ -1,9 +1,10 @@
-import './styles/App.scss';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Navigation from './component/navigation/Navigation';
 import Home from './component/pages/Home';
 import Footer from './component/footer/Footer';
-import About from './component/pages/About';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Portfolio from './component/pages/Portfolio';
+import Faq from './component/pages/Faq';
+import './styles/App.scss';
 
 function App() {
 
@@ -17,8 +18,11 @@ function App() {
       <Route exact path="/">
         <Home/>
       </Route>
-      <Route path="/about">
-        <About />
+      <Route path="/faq">
+        <Faq />
+      </Route>
+      <Route path="/portfolio">
+        <Portfolio />
       </Route>
 
     </Switch>
