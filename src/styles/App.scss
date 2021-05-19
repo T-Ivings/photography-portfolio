@@ -21,30 +21,6 @@ body {
   color: #61dafb;
 }
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  background: white;
-  z-index: 9999999;
-  opacity: 0.85;
-}
-
-#navbar-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  font-family: $site-font;
-  color: black;
-  font-size: larger;
-  :hover {
-    opacity: 1;
-    text-decoration: underline;
-    font-size: x-large;
-    transition: 0.1s;
-  }
-}
-
 #hero-section {
   margin-top: 9em;
 }

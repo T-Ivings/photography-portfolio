@@ -24,7 +24,6 @@ function App() {
       <Route path="/portfolio">
         <Portfolio />
       </Route>
-
     </Switch>
     </Router>
     
