@@ -30,15 +30,14 @@ const Navigation = () => {
     <Navbar style={{top: visible ? '0' : '-160px', transition: 'top 0.6s'}} fixed={"top"} className="navbar">
       <Nav className='d-flex justify-content-around' id="navbar-links">
         <Fade delay={1000}>
-          <Nav.Link href='/faq'></Nav.Link>
-          <Nav.Link href='/portfolio'>Portfolio</Nav.Link>
+          <Nav.Link href='/faq'>FAQ</Nav.Link>
           
           <Dropdown navbar={true} as={Nav.Item}>
             <Dropdown.Toggle id='custom-dropdown' as={Nav.Link}>Portfolio</Dropdown.Toggle>
             <Dropdown.Menu>
-            <Dropdown.Item>Family</Dropdown.Item>
-            <Dropdown.Item>Indoor</Dropdown.Item>
-            <Dropdown.Item>Newborn</Dropdown.Item>
+            <Dropdown.Item id="dropdown-family">Family</Dropdown.Item>
+            <Dropdown.Item id="dropdown-indoor">Indoor</Dropdown.Item>
+            <Dropdown.Item id="dropdown-newborn">Newborn</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
 
