@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { Divider } from '@material-ui/core';
-import "./_Seller.scss";
+import "./Seller.scss";
 
 const Seller = () => {
   return (

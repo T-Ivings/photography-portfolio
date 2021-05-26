@@ -1,5 +1,6 @@
 import React from 'react';
-import { Accordian , Card} from 'react-bootstrap';
+import { Accordion , Card} from 'react-bootstrap';
+import './Faq.scss';
 
 const Faq = () => {
 
@@ -7,14 +8,14 @@ const Faq = () => {
     <section id="faq">
       <h1>Frequently Asked Questions</h1>
 
-      <Accordian>
+      <Accordion class>
         <Card>  
-          <Accordian.Toggle as={Card.Header} eventKey={0}>
+          <Accordion.Toggle as={Card.Header} eventKey={0}>
             First Questions
-          </Accordian.Toggle>
+          </Accordion.Toggle>
           
         </Card>
-      </Accordian>
+      </Accordion>
     </section>
   );
   
